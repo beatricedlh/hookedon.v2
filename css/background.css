@@ -1,0 +1,18 @@
+{}
+
+@font-face {
+    font-family: Piedmont;
+    src: url(../fonts/ED\ Piedmont-Regular.ttf);
+}
+
+h1 {
+    font-family: input-mono-narrow, monospace;
+    font-weight: 100;
+    font-style: thin;
+    font-size: 4vw;
+    line-height: 15vh;
+}
+
+body {
+    background-color: #f4c0d6;
+}

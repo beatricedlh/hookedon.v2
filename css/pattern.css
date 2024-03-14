@@ -1,0 +1,360 @@
+{}
+
+@font-face {
+    font-family: CooperFont;
+    src: url(../fonts/Cooper-ExtraBoldItalic.ttf);
+}
+
+body {
+    background-color: #a2b7de;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #fffbf2;
+}
+
+header {
+    height: 98vh;
+    margin-top: 1vh;
+    background-color: #fffbf2;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-content {
+    max-width: 80%; /* Adjust as needed */
+    text-align: center;
+}
+
+h1 {
+    font-family: 'CooperFont';
+    font-size: 16vw;
+    line-height: 25vh;
+    color: #a2b7de;
+    margin: 0; /* Remove default margin */
+    padding: 50px;
+}
+
+h5 {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+    max-width: 45ch;
+    padding-top: 20px;
+    margin: 20px auto; /* Center horizontally */
+}
+
+h4 {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0px;
+    text-align: left;
+    padding-left: 10%;
+    object-fit: contain;
+}
+
+
+p {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    line-height: 35px;
+    max-width: 65ch;
+}
+
+#ham img {
+    position: fixed;
+    top: -8vh;
+    right: 1vw;
+    width: 7%; /* Adjust the width as needed */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 900;
+}
+
+
+#ham:hover img {
+    transform: scale(1.1);
+}
+
+#homebutton {
+    position: fixed;
+    top: -8vh;
+    left: 2vh; /* Update to left instead of right */
+    width: 4%; /* Adjust the width as needed */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 900;
+}
+
+#homebutton:hover {
+    transform: scale(1.1); /* Adjust the scale as needed */
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98vw;
+    height: 98vh;
+    background-color: #ef7c7c;
+    z-index: 9999;
+    border-radius: 25px;
+    transition: opacity 0.2s ease;
+}
+
+.overlay-visible {
+    opacity: 1;
+}
+
+#overlay ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#overlay ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#overlay ul li a {
+    text-decoration: none;
+    font-family: 'CooperFont';
+    font-size: 7.5vw;
+    line-height: 13vh;
+    color: #fffbf2;
+    transition: font-size 0.2s ease; /* Smooth transition for font size changes */
+}
+
+#overlay ul li a:hover {
+    text-decoration: underline;
+    font-size: 8.5vw; /* Increase the font size by 20% on hover */
+}
+
+#close img {
+    position: fixed;
+    top: -8vh;
+    right: 1vw;
+    width: 3%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#close img:hover {
+    transform: scale(1.1);
+}
+
+
+ul.a {
+    list-style-type: square;
+    font-family: "input-mono-narrow", monospace;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    line-height: 35px;
+    max-width: 65ch;
+}
+
+#scroll-container {
+    overflow-x: auto; 
+    width: 100%; 
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    cursor: default;
+    z-index: 500;
+}
+
+#outline {
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+    width: fit-content;
+}
+
+#outline > div {
+    flex: 0 0 auto;
+    height: fit-content; /* Change height to fit-content */
+    width: 20vw;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    background-color: #fffbf2;
+    position: relative;
+    border: 3px solid black;
+    box-shadow: 6px 6px;
+    border-radius: 25px;
+    padding-left: 8px;
+    transition: none;
+    overflow-y: hidden; /* Change overflow-y to hidden */
+    overflow-x: hidden; /* Add this line */
+}
+
+#outline2 {
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+    width: fit-content;
+}
+
+#outline2 > div {
+    flex: 0 0 auto;
+    height: fit-content; /* Change height to fit-content */
+    width: 20vw;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    background-color: #fffbf2;
+    position: relative;
+    border: 3px solid black;
+    box-shadow: 6px 6px;
+    border-radius: 25px;
+    padding-left: 8px;
+    transition: none;
+    overflow-y: hidden; /* Change overflow-y to hidden */
+    overflow-x: hidden; /* Add this line */
+}
+
+#outline3 {
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+    width: fit-content;
+}
+
+#outline3 > div {
+    flex: 0 0 auto;
+    height: fit-content; /* Change height to fit-content */
+    width: 20vw;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    background-color: #fffbf2;
+    position: relative;
+    border: 3px solid black;
+    box-shadow: 6px 6px;
+    border-radius: 25px;
+    padding-left: 8px;
+    transition: none;
+    overflow-y: hidden; /* Change overflow-y to hidden */
+    overflow-x: hidden; /* Add this line */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-right: 5px;
+    padding-top: 10vh;
+    align-items: center;
+    transition: all 0.2s ease; 
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* General styles for .info */
+.info {
+    height: fit-content;
+    display: grid;
+    margin-top: 2vh;
+    padding: 5vh;
+    grid-template-columns: 45% 55%;
+    align-self: center;
+    background-color: #fffbf2;
+    border-radius: 25px;
+}
+
+.pattern-library {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.pattern-box {
+    position: relative; /* Add position relative for absolute positioning */
+    width: 20vw;
+    height: 20vw;
+    background-color: #fffbf2;
+    border: 3px solid black;
+    box-shadow: 6px 6px;
+    border-radius: 25px;
+    overflow: hidden; /* Ensure the border-radius is applied */
+    flex: 1 0 20vw;
+    transition: all 0.2s ease;
+}
+
+.pattern-box:hover {
+    transform: scale(1.05);
+    background-color: #ef7c7c;
+    z-index: 1;
+}
+
+.pattern-box img {
+    position: absolute; /* Position the image absolutely */
+    top: -10vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire box */
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: 2px;
+    margin-top: 2vh;
+    border-top: 2px dashed #000000;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+  
+.footer-left {
+    flex: 1;
+}
+  
+.footer-right {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+  
+
+#p-footer {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    object-fit: contain;
+    line-height: 15px;
+}

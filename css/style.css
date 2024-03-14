@@ -1,0 +1,325 @@
+{}
+
+@font-face {
+    font-family: CooperFont;
+    src: url(../fonts/Cooper-ExtraBoldItalic.ttf);
+}
+
+body {
+    background-color: #a2b7de;
+    cursor: url("/images/heart_icon.png"), auto;
+}
+
+header {
+    height: 98vh;
+    margin-top: 1vh;
+    text-align: center;
+    background-color: #fffbf2;
+    border-radius: 25px;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #fffbf2;
+}
+
+
+h1 {
+    font-family: 'CooperFont';
+    font-size: 16vw;
+    line-height: 25vh;
+    padding-top: 35vh;
+    color: #a2b7de;
+}
+
+h2 {
+    font-family: "input-mono-narrow", monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0px;
+    text-align: left;
+    padding-left: 5px;
+    object-fit: contain;
+}
+
+h3 {
+    font-family: "input-mono-condensed", monospace;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: #000000 underline;
+    text-underline-offset: 0.1em;
+    line-height: 10px;
+    text-align: left;
+    padding-left: 5px;
+    object-fit: contain;
+}
+
+h4 {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0px;
+    text-align: left;
+    padding-left: 10%;
+    object-fit: contain;
+}
+
+p {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    object-fit: contain;
+    line-height: 35px;
+    max-width: 65ch;
+}
+
+.underline{
+    border-bottom: 2px #000000 dashed;
+    margin-top: 1px;
+}
+
+#loading-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fffbf2;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden; /* Hide the loading screen after fade out */
+  }
+}
+
+#loading-screen.fade-out {
+    animation: fadeOut 0.2s;
+}
+
+#loading-screen img {
+    width: 15%; /* Adjust size as needed */
+    height: 15%; /* Adjust size as needed */
+}
+
+
+#scroll {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    outline: none;
+}
+
+#scroll img {
+    width: 10%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+#scroll img:hover {
+    transform: scale(1.1);
+}
+
+#ham img {
+    position: fixed;
+    top: -8vh; /* Adjust the negative value to move it closer to the top */
+    right: 1vw;
+    width: 7%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+#ham:hover img {
+    transform: scale(1.1);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98vw;
+    height: 98vh;
+    background-color: #ef7c7c;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+#overlay ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#overlay ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#overlay ul li a {
+    text-decoration: none;
+    font-family: 'CooperFont';
+    font-size: 7.5vw;
+    line-height: 13vh;
+    color: #fffbf2;
+    transition: font-size 0.2s ease; /* Smooth transition for font size changes */
+}
+
+#overlay ul li a:hover {
+    text-decoration: underline;
+    font-size: 8.5vw; /* Increase the font size by 20% on hover */
+}
+
+
+#close img {
+    position: fixed;
+    top: -8vh; /* Adjust the negative value to move it closer to the top */
+    right: 1vw;
+    width: 3%;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Added transition property */
+}
+
+#close img:hover {
+    transform: scale(1.1); /* Added hover effect for scaling */
+}
+
+
+#blurb{
+    height:fit-content;
+    display: grid;
+    margin-top: 2vh;
+    padding: 5vh;    
+    grid-template-columns: 45% 55%;
+    align-self: center;
+    background-color: #fffbf2;
+    border-radius: 25px;
+}
+
+
+#scroll-container {
+    overflow-x: auto; 
+    width: 100%; 
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+#scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+#outline {
+    display: flex;
+    gap: 10px; 
+    padding: 10px;
+    width: fit-content;
+}
+
+#outline > div {
+    flex: 0 0 auto; 
+    height: 64vh;
+    width: 20vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 1vh;
+    background-color: #fffbf2;
+    cursor: pointer;
+    position: relative; 
+    border: 3px solid black;
+    box-shadow: 6px 6px;
+    border-radius: 25px;
+    padding-left: 8px;
+    transition: all 0.2s ease; 
+}
+
+#outline > div:hover {
+    transform: scale(1.05);
+    background-color: #ef7c7c;
+    z-index: 1; 
+}
+
+#outline > div:hover ~ div {
+    transform: translateX(30px); 
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-right: 5px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#outline-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    padding-right: 5px;
+    padding-top: 10vh;
+    padding-bottom: 6vh;
+    transition: all 0.2s ease; 
+}
+
+#outline-img:hover {
+    transform: scale(1.05);
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: 2px;
+    border-top: 2px dashed #000000;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+  
+.footer-left {
+    flex: 1;
+}
+  
+.footer-right {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+  
+
+#p-footer {
+    font-family: "input-mono-narrow", monospace;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    object-fit: contain;
+    line-height: 15px;
+}
